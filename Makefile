@@ -5,7 +5,7 @@ PORT=$(shell arduino-cli board list | grep mega | cut --delimiter=" " --fields 1
 FQBN=arduino:avr:mega
 
 BFOLDER=$(PWD)/dist
-FLAGS=-v -b $(FQBN)
+FLAGS=-v -b $(FQBN) -I src/includes/
 BFLAGS=$(FLAGS) --warnings all --build-path $(BFOLDER)
 UFLAGS=$(FLAGS) -p $(PORT) -i $(BFOLDER)/$(PROJECT).arduino.avr.mega.hex
 
