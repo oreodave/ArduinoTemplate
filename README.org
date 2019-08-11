@@ -1,0 +1,13 @@
+#+TITLE: ArduinoTemplate
+
+Only to be used with an Arduino Mega.
+
+* Dependencies
+- GNU Make
+- Arduino IDE
+- Arduino-cli
+- Some text editor
+* How to use
+Use the $(project-name).ino as the main script, and add any C/C++/Sketches in
+src, include them in the main sketch
+Build often, upload every now and then.
