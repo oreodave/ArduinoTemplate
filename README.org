@@ -3,10 +3,15 @@
 Only to be used with an Arduino Mega.
 
 * Dependencies
+** Necessary
 - GNU Make
 - Arduino IDE
 - Arduino-cli
+- Bash
 - Some text editor
+** Optional
+- Python3 for monitor
+- Pip module pyserial for python3
 * How to use
 Use the $(project-name).ino as the main script, and add any C/C++/Sketches in
 src, include them in the main sketch
