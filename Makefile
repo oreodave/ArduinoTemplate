@@ -1,7 +1,8 @@
 PROJECT=ArduinoTemplate
 CC=arduino-cli
+PDIR=$(shell pwd)
 
-PORT=$(shell arduino-cli board list | grep mega | cut --delimiter=" " --fields 1) # gets port that mega processor is running on
+PORT=$(shell sh $(PDIR)/tools/get_port.sh) # gets port that mega processor is running on
 FQBN=arduino:avr:mega
 
 BFOLDER=$(PWD)/dist
