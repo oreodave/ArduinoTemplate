@@ -19,5 +19,6 @@ compile:
 	@mv $(PDIR)/$(PROJECT).arduino.avr.* $(BFOLDER)
 
 upload:
+	@$(MAKE) compile
 	@cd $(PDIR)
-	$(CC) upload $(UFLAGS)
+	@$(CC) upload $(UFLAGS)
