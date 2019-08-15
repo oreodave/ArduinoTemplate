@@ -11,6 +11,9 @@ BFLAGS=$(FLAGS) --warnings all --build-path $(BFOLDER)
 UFLAGS=$(FLAGS) -p $(PORT) -i $(BFOLDER)/$(PROJECT).arduino.avr.mega.hex
 
 default:
+	@$(MAKE) compile
+
+compile:
 	@cd $(PDIR)
 	@$(CC) compile $(BFLAGS)
 	@mv $(PDIR)/$(PROJECT).arduino.avr.* $(BFOLDER)
