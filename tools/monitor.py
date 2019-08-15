@@ -1,6 +1,5 @@
 from serial import Serial
-import time
-from subprocess import run, PIPE, call
+from subprocess import run, PIPE
 
 tool_dir = __file__.replace("monitor.py", "")
 PORT = run(["sh", tool_dir + "get_port.sh"], stdout=PIPE).stdout.decode("utf-8").replace("\n", "")
