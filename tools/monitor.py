@@ -15,10 +15,16 @@ if len(argv) == 2:
 
 ser: Serial = Serial(PORT, serial_port)
 
+last_line = b""
 while 1:
     try:
         line = ser.readline()
-        print(line)
+        # remove repeats
+        if line == last_line:
+            pass
+        else:
+            print(line)
+            last_line = line
     except KeyboardInterrupt:
         break
 
